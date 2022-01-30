@@ -50,8 +50,8 @@
 </template>
 
 <script>
-import tabBar from "../common/TabBar";
-import tabBarItem from "../common/TabBarItem";
+import tabBar from "../common/tabbar/TabBar";
+import tabBarItem from "../common/tabbar/TabBarItem";
 
 export default {
   name: "mainTabBar",
