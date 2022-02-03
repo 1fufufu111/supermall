@@ -19,9 +19,13 @@ export default {
 </script>
 
 <style scoped>
+.block {
+  padding-top:44px;
+}
 el-carousel {
   width: 100%;
-  height:0
+  height:0;
+
 }
 img {
   width: 100%;

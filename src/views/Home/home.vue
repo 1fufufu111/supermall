@@ -3,6 +3,7 @@
     <nav-bar class="homeNav"><template v-slot:center>购物街</template></nav-bar>
     <swiper :banners="banners"></swiper>
     <HomeRecommendView :recommends="recommends"></HomeRecommendView>
+    <FeatureView></FeatureView>
   </div>
 </template>
 
@@ -11,6 +12,7 @@ import NavBar from "@/components/common/navbar/NavBar";
 import {getHomeMultidata} from "../../network/home";
 import Swiper from "@/components/common/swiper/Swiper";
 import HomeRecommendView from "./childComps/HomeRecommendView";
+import FeatureView from "./childComps/FeatureView";
 export default {
   name: "home",
   data(){
@@ -22,7 +24,8 @@ export default {
   components:{
     NavBar,
     Swiper,
-    HomeRecommendView
+    HomeRecommendView,
+    FeatureView
   },
   created() {
     // 1.请求多个数据
@@ -30,6 +33,7 @@ export default {
       // console.log(res);
       this.banners = res.data.data.banner.list;
       this.recommends = res.data.data.recommend.list;
+
     })
   }
 }
@@ -39,5 +43,11 @@ export default {
   .homeNav{
     background-color: var(--color-tint);
     color:#fff;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    z-index: 9;
   }
+
 </style>
