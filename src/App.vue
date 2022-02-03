@@ -9,7 +9,7 @@
 import mainTabBar from "@/components/content/mainTabBar";
   export default {
     components:{
-      mainTabBar
+      mainTabBar,
     }
   }
 </script>
